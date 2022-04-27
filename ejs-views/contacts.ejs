@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/header.ejs') %>
+</head>
+<body>
+  <%- include('./partials/nav.ejs') %>
+  <div class="wrap">
+    <h1>Contacts:</h1>
+    <ul>
+      <% if (contacts.length) { %>
+        <% contacts.forEach(({ link, name }) => { %>
+          <li>
+            <a href="<%= link %>"><%= name %></a>
+          </li>
+        <% }) %>
+      <% } %>
+    </ul>
+  </div>
+</body>
+</html>
